@@ -1,12 +1,16 @@
 import { ThemeProvider } from "styled-components";
 import { defaultTheme } from "./styles/themes/default";
 import { GlobalStyle } from "./styles/global";
+import { BrowserRouter } from "react-router-dom";
+import { Router } from "./router";
 
 export default function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
-      <h1>Enick Jhony</h1>Enick Jhony
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
