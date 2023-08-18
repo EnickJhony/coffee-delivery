@@ -1,6 +1,13 @@
 import { styled } from "styled-components";
 
 export const ContainerHeader = styled.header`
+  width: 100%;
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+`
+
+export const HeaderContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
