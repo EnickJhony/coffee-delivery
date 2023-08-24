@@ -1,12 +1,18 @@
 import { styled } from "styled-components";
 
+import Background from '../../assets/background.png'
+
+export const Container = styled.div`
+  background-image: url(${Background});
+`
+
 export const InfoContent = styled.div`
-  width: 100%;
   max-width: 77rem;
-  margin: 5.75rem auto;
-  padding: 0 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: 544px;
+  display: flex;
+  align-items: center;
 
   h1 {
     font-family: 'Baloo 2';
@@ -88,6 +94,6 @@ export const CoffeeItem = styled.div`
 `
 
 export const InfoImg = styled.img`
-  position: relative;
-  left: 5rem;
+  /* position: relative;
+  left: 5rem; */
 `
