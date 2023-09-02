@@ -3,7 +3,10 @@ import {
   CreditCard,
   CurrencyDollar,
   MapPinLine,
+  Minus,
   Money,
+  Plus,
+  Trash,
 } from "phosphor-react";
 import {
   CheckOut,
@@ -18,7 +21,13 @@ import {
   Description,
   Subtitle,
   Title,
+  CoffeeCartContainer,
+  CoffeeCart,
+  Counter,
+  Summary,
+  ConfirmOrder,
 } from "./styles";
+import Expresso from "../../assets//coffee/Expresso.png";
 
 export function Checkout() {
   return (
@@ -94,7 +103,44 @@ export function Checkout() {
       <div className="Direito">
         <div>
           <Title>Cafés Selecionados</Title>
-          <p>Aqui vai vir os cafés selecionados</p>
+          <CoffeeCartContainer>
+            <CoffeeCart>
+              <div className="info">
+                <img src={Expresso} alt="" />
+                <div className="details">
+                  <Subtitle>Expesso Tradicional</Subtitle>
+                  <div className="action">
+                    <Counter>
+                      <Minus size={16} weight="bold" color="#8047F8" />
+                      <span>1</span>
+                      <Plus size={16} weight="bold" color="#8047F8" />
+                    </Counter>
+                    <button>
+                      <Trash size={16} weight="bold" color="#8047F8" />
+                      Remover
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <strong>R$ 9,90</strong>
+            </CoffeeCart>
+            <div className="line" />
+            <Summary>
+              <div className="totalItems">
+                <div>Total de Itens</div>
+                <div>R$ 0,00</div>
+              </div>
+              <div className="entrega">
+                <div>Entrega</div>
+                <div>R$ 0,00</div>
+              </div>
+              <div className="totalAll">
+                <strong>Total</strong>
+                <strong>R$ 0,00</strong>
+              </div>
+            </Summary>
+            <ConfirmOrder>Confirmar Pedido</ConfirmOrder>
+          </CoffeeCartContainer>
         </div>
       </div>
     </CheckOut>

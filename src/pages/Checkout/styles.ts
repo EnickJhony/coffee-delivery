@@ -6,6 +6,7 @@ export const CheckOut = styled.main`
   padding: 0 1.25rem;
   display: flex;
   align-items: flex-start;
+  gap: 2rem;
   
   .Esquerdo {
     width: 640px;
@@ -132,5 +133,111 @@ export const PaymentButton = styled.button`
     font-size: .75rem;
     line-height: 160%;
     text-transform: uppercase;
+  }
+`
+
+export const CoffeeCartContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2.5rem;
+  background: ${(props) => props.theme["base-card"]};
+  border-radius: 6px;
+
+  .line {
+    background-color: ${(props) => props.theme["base-button"]};
+    width: 100%;
+    height: 1px;
+  }
+`
+
+export const CoffeeCart = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 8px 4px;
+  align-items: stretch;
+  justify-content: space-between;
+
+  .info{
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+
+    img {
+      width: 4rem;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .action {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+
+    button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .25rem;
+      width: 100%;
+      padding: 0 .5rem;
+      background: ${(props) => props.theme["base-button"]};
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+`
+
+export const Counter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background: ${(props) => props.theme["base-button"]};
+  border-radius: 6px;
+  height: 2.375rem;
+  padding: 0.5rem;
+  gap: 0.25rem;
+`
+
+export const Summary = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+
+  .totalAll,
+  .totalItems,
+  .entrega {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .totalAll {
+    font-size: 1.25rem;
+  }
+`
+
+export const ConfirmOrder = styled.button`
+  width: 100%;
+  padding: .75rem;
+  border: none;
+  border-radius: 6px;
+  background-color: ${(props) => props.theme.yellow};
+  color: ${(props) => props.theme.white};
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: .2s;
+
+  &:hover {
+    background-color: ${(props) => props.theme["yellow-dark"]};
   }
 `
