@@ -14,6 +14,8 @@ export const InfoContent = styled.div`
   display: flex;
   align-items: center;
 
+  margin-top: 5rem;
+
   h1 {
     font-family: 'Baloo 2';
     font-weight: 700;
