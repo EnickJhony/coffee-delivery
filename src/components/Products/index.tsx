@@ -16,8 +16,19 @@ import {
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
 
 import { Product } from "../../stock/products";
+import { useState } from "react";
 
 export function Products() {
+  const [quantity, setQuantity] = useState(1);
+
+  const handleIncreaseQuantity = (): void => {
+    setQuantity((state) => state + 1);
+  }
+
+  const handleDecreaseQuantity = (): void => {
+    setQuantity((state) =>  state === 1 ? state : state - 1);
+  }
+
   return (
     <OursCoffee>
       <h2>Nossos Cafés</h2>
@@ -35,12 +46,18 @@ export function Products() {
               </CoffeeValue>
               <CoffeeActions>
                 <Counter>
-                  <Minus size={16} weight="bold" color="#8047F8" />
-                  <span>1</span>
-                  <Plus size={16} weight="bold" color="#8047F8" />
+                  <button onClick={handleDecreaseQuantity}>
+                    <Minus size={16} weight="bold" color="#8047F8" />
+                  </button>
+                  <span>{quantity}</span>
+                  <button onClick={handleIncreaseQuantity}>
+                    <Plus size={16} weight="bold" color="#8047F8" />
+                  </button>
                 </Counter>
                 <Cart>
-                  <ShoppingCart size={22} weight="fill" color="#FFF" />
+                  <button>
+                    <ShoppingCart size={22} weight="fill" color="#FFF" />
+                  </button>
                 </Cart>
               </CoffeeActions>
             </CoffeePrice>

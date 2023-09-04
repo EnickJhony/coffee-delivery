@@ -103,20 +103,38 @@ export const CoffeeActions = styled.div`
 
 export const Counter = styled.div`
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center; 
   background: ${(props) => props.theme["base-button"]};
   border-radius: 6px;
   height: 2.375rem;
   padding: 0.5rem;
   gap: 0.25rem;
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    :hover {
+      opacity: 0.7
+    }
+  }
 `
 
 export const Cart = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: ${(props) => props.theme["purple-dark"]};
-  border-radius: 6px;
-  padding: 0.5rem;
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: ${(props) => props.theme["purple-dark"]};
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  :hover {
+    background-color: ${(props) => props.theme["purple"]};
+  }
 `
