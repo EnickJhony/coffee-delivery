@@ -7,6 +7,8 @@ export const CheckOut = styled.main`
   display: flex;
   align-items: flex-start;
   gap: 2rem;
+
+  margin-top: 5rem;
   
   .Esquerdo {
     width: 640px;
